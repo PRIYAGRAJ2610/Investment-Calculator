@@ -1,9 +1,31 @@
 import Header from "./Components/Header.jsx";
+import UserInput from "./Components/UserInput.jsx";
+import {useState} from 'react';
+import Result from './Components/Result.jsx';
 
 function App() {
-  return (
-    <Header />
-  )
+
+  const[userInput,setUserInput] = useState({
+    initialInvestment: 1000,
+    annualInvestment: 1200,
+    expectedReturn: 6,
+    duration: 10,
+
+});
+
+function handleChange(inputIdentifier, newValue) {
+  setUserInput(prevUserInput => ({
+      ...prevUserInput,
+      [inputIdentifier]: newValue
+  }));
 }
 
-export default App
+  return (
+    <>
+    <Header />
+    <UserInput userInput={userInput} onChange={handleChange} />
+    <Result input={userInput}/>
+    </>
+  )
+}
+export default App;
