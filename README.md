@@ -33,9 +33,11 @@ This is a simple React application for calculating investment returns based on u
 - JavaScript
 - HTML/CSS
 
-## Screenshots
+## Working output Screenshots :-  
 
 ![Investment Calculator](https://github.com/PRIYAGRAJ2610/Investment-Calculator/raw/main/01-starting-project/src/assets/Working_Output/Investment_Calculator.PNG)
+
+### if time duration is given less than 1.
 ![Investment Calculator](https://github.com/PRIYAGRAJ2610/Investment-Calculator/blob/main/01-starting-project/src/assets/Working_Output/Investment_Calculator_Greatervalue.PNG)
 
 
