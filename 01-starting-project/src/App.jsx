@@ -13,6 +13,8 @@ function App() {
 
 });
 
+const inputIsValid = userInput.duration >= 1;
+
 function handleChange(inputIdentifier, newValue) {
   setUserInput(prevUserInput => ({
       ...prevUserInput,
@@ -24,7 +26,13 @@ function handleChange(inputIdentifier, newValue) {
     <>
     <Header />
     <UserInput userInput={userInput} onChange={handleChange} />
-    <Result input={userInput}/>
+    
+    {/* Conditional Rendering */}
+    {/* If valid input show result component else show paragraph to enter valid data */}
+    
+    {inputIsValid && < Result input={userInput} />}
+    {!inputIsValid &&  <p className="center"> Please Enter Time duration greater than 0 </p>}
+  
     </>
   )
 }
